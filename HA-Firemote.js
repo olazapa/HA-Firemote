@@ -134,7 +134,8 @@ const fastappchoices = {
       "friendlyName": 'Tidal',
       "appName": "com.aspiro.tidal",
       "className": "tidalButton",
-      "androidName": "com.aspiro.tidal"},
+      "androidName": "com.aspiro.tidal",
+      "adbLaunchCommand": "adb shell am start -n com.aspiro.tidal/.MainActivity" },
 };
 const appmap = new Map(Object.entries(fastappchoices));
 
