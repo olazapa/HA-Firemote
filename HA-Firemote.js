@@ -135,7 +135,7 @@ const fastappchoices = {
       "appName": "com.aspiro.tidal",
       "className": "tidalButton",
       "androidName": "com.aspiro.tidal",
-      "adbLaunchCommand": "adb shell am start -n com.aspiro.tidal/com.aspiro.wamp.LoginFragmentActivity" },
+      "adbLaunchCommand": "adb shell am start -n com.aspiro.tidal/com.aspiro.wamp.tv.TvLauncherActivity" },
   "twitch": {
       "button": "Twitch",
       "friendlyName": 'Twitch',
