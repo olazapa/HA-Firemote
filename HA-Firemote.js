@@ -135,7 +135,14 @@ const fastappchoices = {
       "appName": "com.aspiro.tidal",
       "className": "tidalButton",
       "androidName": "com.aspiro.tidal",
-      "adbLaunchCommand": "adb shell am start -n com.aspiro.tidal/.MainActivity" },
+      "adbLaunchCommand": "adb shell am start -n com.aspiro.tidal/com.aspiro.wamp.LoginFragmentActivity" },
+  "twitch": {
+      "button": "Twitch",
+      "friendlyName": 'Twitch',
+      "appName": "Twitch (FireTV)",
+      "className": "twitchButton",
+      "androidName": "tv.twitch.android.app",
+      "adbLaunchCommand": "adb shell am start -n tv.twitch.android.app/tv.twitch.android.apps.TwitchActivity" },
 };
 const appmap = new Map(Object.entries(fastappchoices));
 
@@ -594,6 +601,19 @@ class FiremoteCard extends LitElement {
           }
 
           .tidalButton:active, .tidalButton.appActive {
+            box-shadow: 0 0 calc(var(--sz) * 0.857rem) calc(var(--sz) * 0.142rem) rgb(255 255 255 / 20%);
+            filter: none;
+          }
+          
+          .twitchButton {
+            font-size: calc(var(--sz) * 1rem);
+            color: #fff;
+            font-weight: bold;
+            background: #6441a5;
+            filter: brightness(50%);
+          }
+
+          .twitchButton:active, .twitchButton.appActive {
             box-shadow: 0 0 calc(var(--sz) * 0.857rem) calc(var(--sz) * 0.142rem) rgb(255 255 255 / 20%);
             filter: none;
           }
