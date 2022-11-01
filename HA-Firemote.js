@@ -80,10 +80,9 @@ const fastappchoices = {
   "youtube": {
       "button": "YouTube",
       "friendlyName": "YouTube",
-      "appName": "YouTube (FireTV)",
+      "appName": "com.teamsmart.videomanager.tv",
       "className": "youtubeButton",
-      "androidName": "com.amazon.firetv.youtube",
-      "adbLaunchCommand": "adb shell am start -n com.amazon.firetv.youtube/dev.cobalt.app.MainActivity" },
+      "androidName": "com.teamsmart.videomanager.tv"},
 
   "pandora": {
       "button": "pandora",
@@ -129,6 +128,13 @@ const fastappchoices = {
       "className": "paramountPlusButton",
       "androidName": "com.cbs.ott",
       "adbLaunchCommand": "adb shell am start -n com.cbs.ott/com.cbs.app.tv.ui.activity.DeepLinkActivity" },
+    
+  "tidal": {
+      "button": "Tidal",
+      "friendlyName": 'Tidal',
+      "appName": "com.aspiro.tidal",
+      "className": "tidalButton",
+      "androidName": "com.aspiro.tidal"},
 };
 const appmap = new Map(Object.entries(fastappchoices));
 
@@ -574,6 +580,19 @@ class FiremoteCard extends LitElement {
           }
 
           .paramountPlusButton:active, .paramountPlusButton.appActive {
+            box-shadow: 0 0 calc(var(--sz) * 0.857rem) calc(var(--sz) * 0.142rem) rgb(255 255 255 / 20%);
+            filter: none;
+          }
+          
+          .tidalButton {
+            font-size: calc(var(--sz) * 1rem);
+            color: #fff;
+            font-weight: bold;
+            background: #000;
+            filter: brightness(50%);
+          }
+
+          .tidalButton:active, .tidalButton.appActive {
             box-shadow: 0 0 calc(var(--sz) * 0.857rem) calc(var(--sz) * 0.142rem) rgb(255 255 255 / 20%);
             filter: none;
           }
